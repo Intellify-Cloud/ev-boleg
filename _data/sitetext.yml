@@ -11,19 +11,19 @@ services:
         desc: "We submit Home Loan Applications to up to seven banks negotiating the best interest rates and deal in the market at any given time."
         icon: fas fa-home
         link: 
-          url: mailto:grant.butler@evogroup.co.za?subject=Mail from evo Copestone website
+          url: mailto:thea@bondlegacy.co.za?subject=Mail from evo Bond Legacy website
           text: "Email Me"
       - title: "Pre-qualification"
         desc: "I help you check your credit record, income and expenses to give you an accurate assessment of what you can afford. You will then know how likely you are to qualify for a bond."
         icon: fas fa-tasks       
         link:
-          url: tel:+27826035414
-          text: "Call: 082 603 5414"
+          url: tel:+27123323548
+          text: "Call: 012 332 3548"
       - title: "Still Looking for a Home"
         desc: "I am searching property portals and visiting show houses but have a few questions."
         icon: fas fa-search
         link: 
-          url: mailto:grant.butler@evogroup.co.za?subject=Mail from evo Copestone website
+          url: mailto:thea@bondlegacy.co.za?subject=Mail from evo Bond Legacy website
           text: "Email Me"
 
 articles:
@@ -75,7 +75,7 @@ more-calculators:
           text: "Calculate"
 
 textblock:
-    title: "Why evo Copestone"
+    title: "Why evo Bond Legacy"
     text: "Home loans ....getting your bond approved."
     footer: "Our service is completely FREE, with no obligation."
     section: textblock
@@ -99,11 +99,7 @@ portfolio:
     
 about:
     title: "About Us"
-    text2: "evo Copestone is the brainchild of Grant Butler, who after many years in the property and home loan industry, sought a model that would both richly reward our consultants and at the same time provide a service to our clients (Estate Agents, Buyers, Developers, Banks and Attorneys) that is seamless and service “way above the rest”.
-    <br><br>
-    Grant Butler has used his 30 years of home loan experience to create a phenomenal team of consultants where World Class service is a minimum standard. The evo Copestone team excels at customer service, be it banks, agents, buyers or attorneys.
-    <br><br>
-    Besides offering world-class service to all the stake holders (Estate Agents, Buyers, Developers, Banks and Attorneys) in the home loan industry, evo Copestone has a unique admin outsourcing model.  We have dedicated admin resources at our disposal who ensure that our applications are sent seamlessly to multiple banks thereby ensuring you the best possible deal. evo Copestone’ s seamless processing and exceptional service is free to you. Together with evo Copestone, the dream of owning your own home becomes a reality."
+    text2: ""
     
 clients:
     title: Bank Partners
@@ -140,13 +136,13 @@ team:
     section: team
     contact: 
     people:
-      - name: "Grant Butler"
+      - name: "Thea"
         role: "Homeloan Specialist"
         image: assets/img/team/400x400f1.jpg
         social:
-          - url: tel:082 603 5414
+          - url: tel:012 332 3548
             icon: fas fa-phone
-          - url: mailto:grant.butler@evogroup.co.za?subject=evo Copestone Website Enquiry
+          - url: mailto:grant.butler@evogroup.co.za?subject=evo Bond Legacy Website Enquiry
             icon: fas fa-envelope
           # - url: https://www.facebook.com/xxx
           #   icon: fab fa-facebook-f
