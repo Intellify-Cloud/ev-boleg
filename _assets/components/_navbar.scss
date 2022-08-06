@@ -6,7 +6,7 @@
   .navbar-toggler {
     font-size: 12px;
     right: 0;
-    padding: 13px;
+    padding: 10px;
     text-transform: uppercase;
     color: white;
     border: 0;
@@ -82,7 +82,7 @@
 }
 
 // -- mobile --
-@media (min-width:370px) {
+@media (min-width:380px) {
   #mainNav 
     {
       .navbar-brand > img 

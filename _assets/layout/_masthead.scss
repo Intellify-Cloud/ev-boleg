@@ -1,11 +1,12 @@
-// Styling for the masthead
+// HERO IMAGE TEXT Styling 
 header.masthead {
   text-align: center;
-  color: white;
+  color: rgb(255, 255, 255);
+// HERO IMAGE TEXT Styling 
   background-image: url("#{$header-image}");
   background-repeat: no-repeat;
   background-attachment: scroll;
-  background-position: center center;
+  background-position: center left;
   background-size: cover;
   .intro-text {
     padding-top: 100px;
@@ -27,7 +28,8 @@ header.masthead {
   }
 }
 
-@media (min-width:320px) {
+// **** SMALL PHONES **
+@media (min-width:375px) {
   header.masthead {
     .intro-text {
       padding-top: 150px;
@@ -41,7 +43,7 @@ header.masthead {
         @include serif-font;
       }
       .intro-heading {
-        font-size: 50px;
+        font-size: 40px;
         font-weight: 700;
         text-shadow: 2px 2px 2px rgb(70, 70, 70);
         line-height: 60px;
@@ -66,7 +68,7 @@ header.masthead {
         @include serif-font;
       }
       .intro-heading {
-        font-size: 60px;
+        font-size: 50px;
         font-weight: 700;
         text-shadow: 2px 2px 2px rgb(70, 70, 70);
         line-height: 60px;
