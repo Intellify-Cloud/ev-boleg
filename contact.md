@@ -1,6 +1,6 @@
 ---
 layout: page
-title: evo Chanelle Macey
+title: evo Bond Legacy | Montana Park | Pretoria
 background: grey
 ---
 <div class="col-lg-12 text-center">
