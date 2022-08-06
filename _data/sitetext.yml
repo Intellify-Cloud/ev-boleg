@@ -17,7 +17,7 @@ services:
         desc: "I help you check your credit record, income and expenses to give you an accurate assessment of what you can afford. You will then know how likely you are to qualify for a bond."
         icon: fas fa-tasks       
         link:
-          url: tel:+27727292066
+          url: /contact
           text: "Call Me"
       - title: "Still Looking for a Home"
         desc: "I am searching property portals and visiting show houses but have a few questions."
