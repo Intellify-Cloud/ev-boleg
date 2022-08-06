@@ -1,6 +1,6 @@
 header:
     title: 
-    text: Coming Soon
+    text: Need a Home Loan?
 
 services:
     title: "Services We Offer"
@@ -77,7 +77,7 @@ more-calculators:
 textblock:
     title: "Why evo Bond Legacy"
     text: "Home loans ....getting your bond approved."
-    footer: "Our service is completely FREE, with no obligation."
+    footer: "Our services is completely FREE, with no obligation."
     section: textblock
     list:
       - title: "I help you complete one application, which I submit to all the banks."
@@ -99,7 +99,14 @@ portfolio:
     
 about:
     title: "About Us"
-    text2: ""
+    text2: "We act as an intermediary between the home loan applicant and the banks to procure a bond on the clients behalf. 
+    Our objective is to obtain the best deal for our clients.
+    <br><br>
+    We develop sustainable relationships with Property Practitioners who will then recommend us to their clients when they are ready to apply for a home loan.
+    <br><br>
+    Our responsibilities include obtaining information from loan applicants, submitting the applications to the banks for credit assessments, follow up and escalation to the relevant banks, analyzing applicants' financial status, preparing and submitting motivations and reviewing loan agreements.
+    <br><br>
+    Regular follow ups done with all relevant parties to expedite the registration process and feedback provided to the clients and Property Practitioners."
     
 clients:
     title: Bank Partners
@@ -136,13 +143,13 @@ team:
     section: team
     contact: 
     people:
-      - name: "Thea"
-        role: "Homeloan Specialist"
-        image: assets/img/team/400x400f1.jpg
+      - name: "Thea Sauer"
+        role: "Branch Manager"
+        image: assets/img/team/Thea Sauer evo Bond Legacy.jpg
         social:
-          - url: tel:012 332 3548
+          - url: tel:072 729 2066
             icon: fas fa-phone
-          - url: mailto:grant.butler@evogroup.co.za?subject=evo Bond Legacy Website Enquiry
+          - url: mailto:thea@bondlegacy.co.za?subject=evo Bond Legacy Website Enquiry
             icon: fas fa-envelope
           # - url: https://www.facebook.com/xxx
           #   icon: fab fa-facebook-f
@@ -154,14 +161,28 @@ testimonials:
     text: "What Others Say About Me"
     section: testimonials
     people:
-      - name: "Anon D. ☆☆☆☆☆"
-        testimony: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo."
+      - name: "El-Roy C."
+        testimony: "Thank you very much Thea. We really appreciate your great work."
 
-      - name: "Unknown M. ☆☆☆☆☆"
-        testimony: "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem."
+      - name: "Mnr Henderson"
+        testimony: "Baie dankie vir al jou hulp en bystand."
+      
+      - name: "Marco M."
+        testimony: "Thanks again for your service Thea. I’ll sure  will use you, in the future again."
+        
+      - name: "Nthabiseng"
+        testimony: "Thank you so much for the good news! I am so excited."
 
-      - name: "Psuedo V.☆☆☆☆☆"
-        testimony: "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga."
+      - name: "Louise L."
+        testimony: "Nadat ek nou al regtig oor die ergste skok is.Baie baie dankie vir al jou moeite om te verband goedgekeur te kry. Sonder jou sou ek dit verseker nie reggekry het nie. BAIE BAIE BAIE DANKIE!"
+      
+      - name: "Maswanganye S."
+        testimony: "I would like to thank you for your excellent service you offered me in assisting me to acquire a home loan and negotiating for better rates and discount on bond registration fees. You were always available and willing to assist me and I am extremely satisfied with all the help and service you gave to me. Thank you so much and keep up the great work you are doing."
+
+
+
+      
+
 
         
 
@@ -175,8 +196,8 @@ footer:
     social:
       # - url: https://twitter.com
       #   icon: "fab fa-twitter"  
-      # - url: https://www.facebook.com/xxx
-      #   icon: "fab fa-facebook-f"
+      - url: https://www.facebook.com/evo.bondlegacy
+        icon: "fab fa-facebook-f"
       # - url: https://linkedin.com
       #   icon: "fab fa-linkedin-in"
       # - url: https://github.com/raviriley/agency-jekyll-theme

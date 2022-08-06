@@ -7,8 +7,6 @@ header.masthead {
   background-attachment: scroll;
   background-position: center right;
   background-size: cover;
-  height: 90vh;
-  width: 100vw;
   .intro-text {
     padding-top: 100px;
     padding-bottom: 50px;
@@ -29,8 +27,7 @@ header.masthead {
   }
 }
 
-@media (min-width:320px)
-{
+@media (min-width:320px) {
   header.masthead {
     .intro-text {
       padding-top: 150px;
@@ -105,8 +102,8 @@ header.masthead {
   }
 }
 
-p {
-  margin-top: 90px;
-  margin-bottom: 1rem;
-  line-height: 1.75;
-}
+// p {
+//   margin-top: 90px;
+//   margin-bottom: 1rem;
+//   line-height: 1.75;
+// }
