@@ -1,9 +1,9 @@
   <!-- Navigation -->
-  <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav" aria-label="Primary navigation">
     <div class="container">
       <a class="navbar-brand js-scroll-trigger" href="#page-top">
         {%- if site.logo -%}
-        <img src="{{ site.baseurl }}{{ site.logo.path }}" />
+        <img src="{{ site.baseurl }}{{ site.logo.path }}" alt="{{ site.company | default: site.title }}">
         {%- else -%}
         {{ site.title }}
         {%- endif -%}
@@ -20,14 +20,13 @@
           <li class="nav-item">
             {%- if link.url -%}
             <a class="nav-link js-scroll-trigger" href="{{ link.url }}">{{ link.title }}</a>
-            {%- else if link.section -%}
+            {%- elsif link.section -%}
             <a class="nav-link js-scroll-trigger" href="#{{ link.section }}">{{ link.title }}</a>
             {%- else -%}
             <a class="nav-link js-scroll-trigger" href="#">{{ link.title }}</a>
             {%- endif -%}
           </li>
           {% endfor %}
-          </li>
         </ul>
       </div>
     </div>
@@ -44,8 +43,7 @@
         {%- if site.data.sitetext.header.text -%}
         <div class="intro-heading text-uppercase">{{ site.data.sitetext.header.text | markdownify }}</div>
         {%- endif -%}
-        <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger"
-          href="/contact">Talk To Us</a>
+        <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="{{ "/contact" | relative_url }}">Talk To Us</a>
       </div>
     </div>
   </header>

@@ -1,14 +1,25 @@
-// Styling for the services section
+// ============================================
+// Text Block Section (Why Us)
+// ============================================
+
 .textblock-heading {
-    margin: 5px 0;
-    text-transform: none;
-    color: #01acc8;
+  margin: $space-lg 0;
+  text-transform: none;
+  color: $primary;
+  font-size: $font-size-lg;
+  font-weight: $font-weight-bold;
 }
 
 .textblock-image {
   min-width: 50px;
+
+  i {
+    color: $primary;
+  }
 }
 
 .textblock-title {
-  line-height: 2em;
+  line-height: 1.6;
+  font-size: $font-size-base;
+  color: $text-primary;
 }

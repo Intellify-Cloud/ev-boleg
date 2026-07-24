@@ -1,56 +1,93 @@
-  <!-- Footer -->
-  <footer class="footer" id="footer" style="background-color:white;">
+ do <!-- Footer -->
+  <footer class="footer" id="footer">
     <div class="container">
-      <div class="row align-items-center">
-        <div class="col-md-4">
-          <span class="copyright">Copyright &copy; {{ site.company }} {{ 'now' | date: "%Y" }}</span>
-        </div>
-		<!-- Social Media -->
-        <div class="col-md-4">
-          <ul class="list-inline social-buttons">
-		  {% for link in site.data.sitetext.footer.social  %}
-            <li class="list-inline-item">
-			  {% if link.url %}
-              <a href="{{ link.url }}">
-                {% if link.icon %}<i class="{{ link.icon }}"></i>{% endif %}
-              </a>
-			  {% endif %}
-            </li>
-			{% endfor %}
-          </ul>
-          <small>
-            <a href="/privacy-statement" target="_blank">Privacy Statement  |  </a><a href="/data-sharing-agreement" target="_blank">Data Sharing</a>
-          </small>
+      
+      <!-- Main footer area: brand + navigation columns -->
+      <div class="footer-main">
+        
+        <!-- Brand column -->
+        <div class="footer-brand">
+          <a class="footer-logo" href="{{ site.baseurl }}/">
+            {%- if site.logo -%}
+            <img src="{{ site.logo.path | relative_url }}" alt="{{ site.title }} — Home" />
+            {%- else -%}
+            {{ site.title }}
+            {%- endif -%}
+          </a>
+          {% if site.data.sitetext.footer.description %}
+          <p class="footer-description">{{ site.data.sitetext.footer.description }}</p>
+          {% endif %}
+          {% if site.data.sitetext.footer.social %}
+          <nav class="footer-social" aria-label="{{ site.data.sitetext.footer.social_label | default: 'Social links' }}">
+            <ul class="list-inline social-buttons">
+              {% for link in site.data.sitetext.footer.social %}
+              {% if link.url %}
+              <li class="list-inline-item">
+                <a href="{{ link.url }}" target="_blank" rel="noopener" aria-label="{{ link.title | default: 'Social media link' }}">
+                  {% if link.icon %}<i class="{{ link.icon }}" aria-hidden="true"></i>{% endif %}
+                </a>
+              </li>
+              {% endif %}
+              {% endfor %}
+            </ul>
+          </nav>
+          {% endif %}
         </div>
 
-		<!-- Legal -->
-        <div class="col-md-4">
-          <ul class="list-inline quicklinks">
-            <li class="list-inline-item">
-              <a href="https://evohomeloans.co.za/bond-originators/pretoria/" target="_blank">{{ site.data.sitetext.footer.legal | default: "" }}</a>
-            </li>
-          </ul>
-        </div>
+        <!-- Navigation columns -->
+        {% if site.data.sitetext.footer.sections %}
+        <nav class="footer-navigation" aria-label="Footer navigation">
+          {% for section in site.data.sitetext.footer.sections %}
+          <div class="footer-column">
+            <h2 class="footer-column-title">{{ section.title }}</h2>
+            {% if section.links %}
+            <ul>
+              {% for link in section.links %}
+              <li>
+                <a href="{% if link.external %}{{ link.url }}{% else %}{{ link.url | relative_url }}{% endif %}"
+                   {% if link.external %}target="_blank" rel="noopener"{% endif %}>
+                  {{ link.text }}
+                </a>
+              </li>
+              {% endfor %}
+            </ul>
+            {% endif %}
+          </div>
+          {% endfor %}
+        </nav>
+        {% endif %}
+        
       </div>
+
+      <!-- Bottom strip -->
+      <div class="footer-bottom">
+        <div class="footer-copyright">
+          &copy; {{ site.company | default: site.title }} {{ 'now' | date: "%Y" }}
+        </div>
+        <div class="footer-legal">
+          <a href="{{ site.data.sitetext.footer.privacy_url | default: '/privacy-statement' | relative_url }}">{{ site.data.sitetext.footer.privacy_label | default: 'Privacy Policy' }}</a>
+          <span class="footer-legal-sep" aria-hidden="true">·</span>
+          <a href="{{ site.data.sitetext.footer.terms_url | default: '/data-sharing-agreement' | relative_url }}">{{ site.data.sitetext.footer.terms_label | default: 'Terms of Use' }}</a>
+        </div>
+        {% if site.data.sitetext.footer.credits %}
+        <div class="footer-credits">
+          {% for credit in site.data.sitetext.footer.credits %}
+          {% if credit.text and credit.url %}
+          <a href="{{ credit.url }}" target="_blank" rel="noopener">{{ credit.text }}</a>{% unless forloop.last %}<span aria-hidden="true"> · </span>{% endunless %}
+          {% endif %}
+          {% endfor %}
+        </div>
+        {% endif %}
+      </div>
+
     </div>
   </footer>
-{% if page.layout == "page" %}
-<script>
-fixPageShort();
-function fixPageShort() {
-  if(window.innerHeight > document.body.offsetHeight) {
-    document.getElementById("footer").style.position="fixed";
-    document.getElementById("footer").style.bottom=0;
-    document.getElementById("footer").style.right=0;
-    document.getElementById("footer").style.left=0;
-    document.getElementById("footer").style.width="100%";
-  }
-}
-</script>
-{% endif %}
 
-<div class="whatsapp">
-  <a href="https://api.whatsapp.com/send?phone={{site.contactwhatapp}}" target="_blank">    
-  <h4><i class="fab fa-whatsapp fa-2x " aria-hidden="true" ></i></h4>Chat  </a>
-</div>
+  <!-- WhatsApp floating button -->
+  <div class="whatsapp">
+    <a href="https://api.whatsapp.com/send?phone={{ site.contactwhatapp }}" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+      <i class="fab fa-whatsapp fa-2x" aria-hidden="true"></i>Chat
+    </a>
+  </div>
   <!-- End Footer -->
+</write_to_file>

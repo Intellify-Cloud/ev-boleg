@@ -1,18 +1,81 @@
-// Styling for the services section
+// ============================================
+// Services & Cards Section
+// ============================================
+
 .service-heading {
-  margin: 15px 0;
+  margin: $space-lg 0 $space-sm;
   text-transform: none;
+  font-size: $font-size-lg;
+  font-weight: $font-weight-bold;
 }
 
-#services .card {
-  border: none
+#services .card,
+#calculators .card,
+#more-calculators .card,
+#articles .card {
+  border: 1px solid $border-color-light;
+  border-radius: $radius-lg;
+  transition: all $transition-base;
+  background: $white;
+  box-shadow: none;
+  min-height: 280px;
+
+  &:hover {
+    border-color: rgba($primary, 0.2);
+    box-shadow: $shadow-md;
+    transform: translateY(-2px);
+  }
+
+  .card-body {
+    padding: $space-2xl $space-lg;
+
+    h4.card-title {
+      font-size: $font-size-md;
+      margin-bottom: $space-md;
+    }
+
+    .text-muted {
+      font-size: $font-size-sm;
+      line-height: $line-height-relaxed;
+    }
+  }
+
+  .card-footer {
+    border: none;
+    background: none;
+    padding: 0 $space-lg $space-lg;
+
+    .btn {
+      width: 100%;
+    }
+  }
 }
 
-#services .card .card-footer {
-  border: none;
-  background: none;
+// Icon styling
+#services .fa-stack,
+#calculators .fa-stack,
+#more-calculators .fa-stack {
+  margin-bottom: $space-md;
+
+  .fa-circle {
+    color: $primary;
+  }
+
+  .fa-inverse {
+    color: $white;
+  }
 }
-  
-#services .btn {
-  border-radius: 30px;
+
+// Card deck responsive
+.card-deck.services,
+.card-deck.calculators,
+.card-deck.articles {
+  @include media-breakpoint-down(md) {
+    display: flex;
+    flex-direction: column;
+
+    .card {
+      margin-bottom: $space-lg;
+    }
+  }
 }

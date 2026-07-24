@@ -1,97 +1,139 @@
-/*! 
- * Styling for the navbar
- */
- #mainNav {
-  background-color: $gray-100;
+// ============================================
+// Navigation Styles
+// ============================================
+
+#mainNav {
+  background-color: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba($border-color, 0.5);
+
   .navbar-toggler {
-    font-size: 12px;
+    font-size: $font-size-sm;
     right: 0;
-    padding: 10px;
+    padding: $space-sm $space-md;
     text-transform: uppercase;
-    color: white;
+    color: $white;
     border: 0;
     background-color: $primary;
+    border-radius: $radius-sm;
     @include heading-font;
+
+    &:focus {
+      box-shadow: 0 0 0 3px rgba($primary, 0.35);
+    }
   }
+
   .navbar-brand {
     color: $primary;
+    font-weight: $font-weight-bold;
     @include script-font;
+
     &.active,
     &:active,
     &:focus,
     &:hover {
-      color: darken($primary, 10%);
+      color: $primary-dark;
     }
   }
+
   .navbar-brand > img {
-    width: 240px;
+    width: 200px;
+    height: auto;
+    transition: all $transition-base;
   }
+
   .navbar-nav {
     .nav-item {
       .nav-link {
-        font-size: 98%;
-        font-weight: bold;
-        padding: 0.75em 0;
-        letter-spacing: 1.5px;
-        color: #000;
+        font-size: $font-size-sm;
+        font-weight: $font-weight-semibold;
+        padding: $space-md $space-md;
+        letter-spacing: 0.5px;
+        color: $text-primary;
+        position: relative;
         @include heading-font;
+        transition: color $transition-fast;
+
+        &::after {
+          content: '';
+          position: absolute;
+          bottom: 0;
+          left: $space-md;
+          right: $space-md;
+          height: 2px;
+          background: $primary;
+          transform: scaleX(0);
+          transition: transform $transition-base;
+        }
+
         &.active,
         &:hover {
           color: $primary;
+
+          &::after {
+            transform: scaleX(1);
+          }
         }
       }
     }
   }
 }
 
-@media (min-width:992px) {
+// Desktop styles
+@include media-breakpoint-up(lg) {
   #mainNav {
-    padding-top: 5px;
-    padding-bottom: 5px;
-    -webkit-transition: padding-top 0.3s, padding-bottom 0.3s;
-    -moz-transition: padding-top 0.3s, padding-bottom 0.3s;
-    transition: padding-top 0.3s, padding-bottom 0.3s;
-    border: none;
-    background-color: rgba(255,255,255,.6);
+    padding-top: $space-sm;
+    padding-bottom: $space-sm;
+    transition: padding $transition-base, background-color $transition-base;
+    border-bottom: 1px solid transparent;
+
     .navbar-brand {
-      font-size: 2em;
-      -webkit-transition: all 0.3s;
-      -moz-transition: all 0.3s;
-      transition: all 0.3s;
+      font-size: 1.5em;
+      transition: all $transition-base;
     }
 
     .navbar-nav {
       .nav-item {
         .nav-link {
-          padding: 1.1em 1em !important;
+          padding: 1em 1em !important;
         }
       }
     }
 
     &.navbar-shrink {
-      background-color: #fff;
-      padding-top: 10px;
-      padding-bottom: 5px;
+      background-color: rgba(255, 255, 255, 0.98);
+      border-bottom: 1px solid rgba($border-color, 0.5);
+      padding-top: 0;
+      padding-bottom: 0;
+
       .navbar-brand {
-        font-size: 1.75em;
-        padding: 8px 0;
+        font-size: 1.25em;
+        padding: 0;
       }
+
       .navbar-brand > img {
-        width: 240px;
-        max-height: fit-content;
+        width: 180px;
       }
     }
   }
 }
 
-// -- mobile --
-@media (min-width:380px) {
-  #mainNav 
-    {
-      .navbar-brand > img 
-      {
-        width: 240px;
-      }
+// Mobile styles
+@include media-breakpoint-down(md) {
+  #mainNav {
+    background-color: $white;
+
+    .navbar-brand > img {
+      width: 180px;
+    }
+
+    .navbar-collapse {
+      background: $white;
+      border-radius: $radius-md;
+      box-shadow: $shadow-md;
+      padding: $space-md;
+      margin-top: $space-sm;
     }
   }
-
+}

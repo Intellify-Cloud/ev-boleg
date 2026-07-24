@@ -6,19 +6,19 @@
           <h2 class="section-heading text-uppercase">{{ site.data.sitetext.testimonials.title }}</h2>
           
           
-         <h3 class="textblock-subheading text-muted"><a class="badge badge-pill g "" }}"> {{ site.data.sitetext.testimonials.text | default: "" }}</a></h3>
+         <h3 class="textblock-subheading text-muted">{{ site.data.sitetext.testimonials.text | default: "" }}</h3>
         
         </div>
       </div>
       <div class="row">
       {% for person in site.data.sitetext.testimonials.people %}
         <div class="col-lg-4">
-          <div class="team-member">
+          <blockquote class="team-member">
             <!-- <img class="mx-auto rounded-circle" src="{{ person.image }}" alt=""> -->
             <p class="text-muted font-italic">{{ person.testimony }}</p>
-            <h5>{{ person.name }}</h5>
+            <footer>{{ person.name }}</footer>
 
-          </div>
+          </blockquote>
         </div>
       {% endfor %}
       </div>

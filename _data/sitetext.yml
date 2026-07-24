@@ -1,4 +1,4 @@
-header:
+ges are also inheader:
     title: 
     text: Need a Home Loan?
 
@@ -192,18 +192,50 @@ contact:
     section: team
     
 footer:
-    legal: "Powered by evo Home Loans"
+    description: "We help you get the best home loan deal by sourcing competitive quotes from all major South African banks."
+    social_label: "Follow us"
     social:
-      # - url: https://twitter.com
-      #   icon: "fab fa-twitter"  
       - url: https://www.facebook.com/evo.bondlegacy
         icon: "fab fa-facebook-f"
-      # - url: https://linkedin.com
-      #   icon: "fab fa-linkedin-in"
-      # - url: https://github.com/raviriley/agency-jekyll-theme
-      #   icon: "fab fa-github"
-      # - url: https://instagram.com
-      #   icon: "fab fa-instagram"
+        title: "Facebook"
+    privacy_label: "Privacy Statement"
+    privacy_url: "/privacy-statement"
+    terms_label: "Data Sharing"
+    terms_url: "/data-sharing-agreement"
+    sections:
+      - title: "Explore"
+        links:
+          - text: "Why Us"
+            url: "/#textblock"
+          - text: "Services"
+            url: "/#services"
+          - text: "Team"
+            url: "/#team"
+          - text: "Calculators"
+            url: "/#calculators"
+      - title: "Resources"
+        links:
+          - text: "Bond Calculator"
+            url: "/affordability-calculator"
+          - text: "Repayment Calculator"
+            url: "/bond-calculator"
+          - text: "Transfer Cost Calculator"
+            url: "/transfer-cost-calculator"
+          - text: "Deposit Savings Calculator"
+            url: "/deposit-savings-calculator"
+      - title: "Get in touch"
+        links:
+          - text: "072 729 2066"
+            url: "tel:+27727292066"
+            external: true
+          - text: "thea@bondlegacy.co.za"
+            url: "mailto:thea@bondlegacy.co.za"
+            external: true
+          - text: "Contact Us"
+            url: "/contact"
+    credits:
+      - text: "Powered by evo Home Loans"
+        url: "https://evohomeloans.co.za/bond-originators/pretoria/"
 
 
 # {{ site.data.sitetext.ex.ex | markdownify | default: example }}

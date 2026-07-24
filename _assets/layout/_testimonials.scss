@@ -1,19 +1,54 @@
-// Styling for the team section
-.team-member {
-  margin-bottom: 50px;
-  text-align: center;
-  img {
-    width: 225px;
-    height: 225px;
-    border: 7px solid fade-out($black, 0.9);
-  }
-  h4 {
-    margin-top: 25px;
-    margin-bottom: 0;
-    text-transform: none;
-  }
-  p {
-    margin-top: 0;
+// ============================================
+// Testimonials Section
+// ============================================
+
+#testimonials {
+  .team-member {
+    margin-bottom: $space-2xl;
+    text-align: center;
+
+    h4, h5 {
+      margin-top: $space-md;
+      margin-bottom: $space-xs;
+      text-transform: none;
+    }
+
+    h5 {
+      color: $primary;
+      font-weight: $font-weight-bold;
+      font-size: $font-size-md;
+    }
+
+    p {
+      margin-top: 0;
+      font-size: $font-size-sm;
+      line-height: $line-height-relaxed;
+      color: $text-secondary;
+      max-width: 100%;
+    }
+
+    .text-muted.font-italic {
+      font-size: $font-size-base;
+      color: $text-primary !important;
+      background: $bg-primary-light;
+      padding: $space-lg;
+      border-radius: $radius-lg;
+      position: relative;
+      margin-bottom: $space-lg;
+
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: -8px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 0;
+        height: 0;
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+        border-top: 10px solid $bg-primary-light;
+      }
+    }
   }
 }
 

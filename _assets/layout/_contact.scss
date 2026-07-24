@@ -1,51 +1,99 @@
-// Styling for the contact section
+// ============================================
+// Contact Section
+// ============================================
+
 section#contact {
   background-color: $gray-900;
   background-image: url("#{$contact-image}");
   background-repeat: no-repeat;
   background-position: center;
+  background-size: cover;
+  position: relative;
+
+  // Dark overlay for readability
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+  }
+
+  .container {
+    position: relative;
+    z-index: 1;
+  }
+
   .section-heading {
     color: $white;
   }
+
+  .section-subheading {
+    color: rgba(255, 255, 255, 0.7) !important;
+  }
+
   .form-group {
-    margin-bottom: 25px;
+    margin-bottom: $space-md;
+
     input,
     textarea {
-      padding: 20px;
+      padding: $input-padding-y $input-padding-x;
+      border-radius: $input-radius;
+      border: $input-border-width solid $border-color;
+      font-family: $font-family-base;
+      font-size: $font-size-base;
+      transition: all $transition-fast;
+
+      &:focus {
+        border-color: $primary;
+        box-shadow: 0 0 0 3px rgba($primary, 0.2);
+      }
     }
+
     input.form-control {
-      height: auto;
+      height: $input-height-md;
     }
+
     textarea.form-control {
-      height: 248px;
+      height: 200px;
+      resize: vertical;
     }
   }
+
   .form-control:focus {
     border-color: $primary;
-    box-shadow: none;
+    box-shadow: 0 0 0 3px rgba($primary, 0.2);
   }
+
+  // Floating label style placeholders (not ideal, but preserving existing form structure)
   ::-webkit-input-placeholder {
-    font-weight: 700;
-    color: $gray-400;
-    @include heading-font;
+    font-weight: $font-weight-normal;
+    color: $text-muted;
+    font-family: $font-family-base;
+    font-size: $font-size-sm;
   }
   :-moz-placeholder {
-    font-weight: 700;
-    color: $gray-400;
-    @include heading-font;
+    font-weight: $font-weight-normal;
+    color: $text-muted;
+    font-family: $font-family-base;
+    font-size: $font-size-sm;
   }
   ::-moz-placeholder {
-    font-weight: 700;
-    color: $gray-400;
-    @include heading-font;
+    font-weight: $font-weight-normal;
+    color: $text-muted;
+    font-family: $font-family-base;
+    font-size: $font-size-sm;
   }
   :-ms-input-placeholder {
-    font-weight: 700;
-    color: $gray-400;
-    @include heading-font;
+    font-weight: $font-weight-normal;
+    color: $text-muted;
+    font-family: $font-family-base;
+    font-size: $font-size-sm;
   }
 }
 
 .contact-us p {
-  margin-bottom: .25em;
+  margin-bottom: $space-xs;
 }

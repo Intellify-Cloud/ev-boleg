@@ -1,19 +1,30 @@
-.brand-logo {
-  margin: 20px;
-}
+// ============================================
+// Clients / Bank Partners Section
+// ============================================
 
-#clients .row {
-  margin-top: 50px;
-}
+#clients {
+  .row {
+    margin-top: $space-2xl;
+  }
 
-#clients img {
-  filter: rgb(161, 159, 143); /* IE6-9 */
-  -webkit-filter: grayscale(0); /* Google Chrome, Safari 6+ & Opera 15+ */
-  filter: grayscale(0); /* Microsoft Edge and Firefox 35+ */
-}
+  img {
+    filter: grayscale(100%);
+    opacity: 0.6;
+    transition: all $transition-base;
+    margin: 0 auto;
+    max-height: 100px;
+    object-fit: contain;
 
-/* Disable grayscale on hover */
-#clients img:hover {
-  -webkit-filter: grayscale(0);
-  filter: none;
+    &:hover {
+      filter: grayscale(0);
+      opacity: 1;
+    }
+  }
+
+  .col-md-3.col-sm-6 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: $space-md;
+  }
 }

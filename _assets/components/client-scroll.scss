@@ -1,12 +1,31 @@
-// Styling for the horizontally scrolling clients section
+// ============================================
+// Horizontally Scrolling Clients
+// ============================================
+
 #scrolling-clients {
   display: flex;
   flex-wrap: nowrap;
   overflow-x: auto;
   overflow-y: hidden;
+  gap: $space-lg;
+  padding: $space-md 0;
+  scrollbar-width: thin;
+  scrollbar-color: $gray-300 transparent;
+
+  &::-webkit-scrollbar {
+    height: 6px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: $gray-300;
+    border-radius: $radius-pill;
+  }
 }
 
-#col-md-3 col-sm-6 {
+#scrolling-clients > .col-md-3 {
   flex: 0 0 auto;
 }
-

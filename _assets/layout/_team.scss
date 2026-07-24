@@ -1,23 +1,67 @@
-// Styling for the team section
+// ============================================
+// Team Section
+// ============================================
+
 .team-member {
-  margin-bottom: 50px;
+  margin-bottom: $space-2xl;
   text-align: center;
+
   img {
-    width: 225px;
-    height: 225px;
-    border: 7px solid fade-out($black, 0.9);
+    width: 180px;
+    height: 180px;
+    border: 4px solid $gray-200;
+    object-fit: cover;
+    border-radius: $radius-circle;
+    box-shadow: $shadow-sm;
+    transition: all $transition-base;
+
+    &:hover {
+      box-shadow: $shadow-md;
+      border-color: rgba($primary, 0.3);
+    }
   }
+
   h4 {
-    margin-top: 25px;
-    margin-bottom: 0;
+    margin-top: $space-lg;
+    margin-bottom: $space-xs;
     text-transform: none;
+    font-size: $font-size-lg;
+    font-weight: $font-weight-bold;
   }
+
   p {
     margin-top: 0;
+    color: $text-secondary;
+    font-size: $font-size-sm;
+  }
+
+  .social-buttons {
+    margin-top: $space-sm;
   }
 }
 
 .highlight {
   background-color: #fff2ac;
   background-image: linear-gradient(to right, #ffe359 0%, #fff2ac 100%);
+}
+
+// Team social buttons
+#team .social-buttons li a {
+  font-size: $font-size-base;
+  line-height: 40px;
+  display: block;
+  width: 40px;
+  height: 40px;
+  transition: all $transition-base;
+  color: $white;
+  border-radius: $radius-circle;
+  outline: none;
+  background-color: $primary;
+
+  &:active,
+  &:focus,
+  &:hover {
+    background-color: $primary-dark;
+    transform: translateY(-2px);
+  }
 }

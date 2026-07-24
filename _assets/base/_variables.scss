@@ -1,12 +1,151 @@
-// Variables
+// ============================================
+// Design Tokens
+// ============================================
 
-// Restated Bootstrap Variables
-$gray-100: #f8f9fa !default;
-$gray-200: #e9ecef !default;
-$gray-300: #dee2e6 !default;
-$gray-400: #ced4da !default;
-$gray-500: #adb5bd !default;
-$gray-600: #868e96 !default;
-$gray-700: #495057 !default;
-$gray-800: #343a40 !default;
-$gray-900: #212529 !default;
+// --- Brand Colors ---
+$primary: #00ACC8;
+$primary-dark: darken($primary, 10%);
+$primary-light: lighten($primary, 15%);
+$brand-red: #db5b4f;
+$brand-whatsapp: #20b20f;
+$highlight-start: #ffe359;
+$highlight-end: #fff2ac;
+
+// --- Neutral Colors ---
+$white: #fff;
+$black: #000;
+$gray-100: #f8f9fa;
+$gray-200: #e9ecef;
+$gray-300: #dee2e6;
+$gray-400: #ced4da;
+$gray-500: #adb5bd;
+$gray-600: #868e96;
+$gray-700: #495057;
+$gray-800: #343a40;
+$gray-900: #212529;
+
+// --- Background Colors ---
+$bg-white: $white;
+$bg-light: $gray-100;
+$bg-dark: $gray-900;
+$bg-primary-light: rgba($primary, 0.04);
+
+// --- Text Colors ---
+$text-primary: $gray-900;
+$text-secondary: $gray-600;
+$text-muted: $gray-500;
+$text-inverse: $white;
+$text-link: $primary;
+$text-link-hover: $primary-dark;
+
+// --- Border Colors ---
+$border-color: $gray-300;
+$border-color-light: $gray-200;
+$border-color-focus: $primary;
+
+// --- Border Radius ---
+$radius-sm: 4px;
+$radius-md: 8px;
+$radius-lg: 12px;
+$radius-xl: 16px;
+$radius-pill: 50px;
+$radius-circle: 50%;
+
+// --- Spacing Scale ---
+$space-xs: 0.25rem;   // 4px
+$space-sm: 0.5rem;    // 8px
+$space-md: 1rem;      // 16px
+$space-lg: 1.5rem;    // 24px
+$space-xl: 2rem;      // 32px
+$space-2xl: 3rem;     // 48px
+$space-3xl: 4rem;     // 64px
+$space-4xl: 6rem;     // 96px
+
+// --- Typography ---
+$font-family-base: 'Comfortaa', cursive;
+$font-family-heading: 'Comfortaa', cursive;
+$font-family-brand: $font-family-base;
+
+$font-size-xs: 0.75rem;    // 12px
+$font-size-sm: 0.875rem;   // 14px
+$font-size-base: 1rem;     // 16px
+$font-size-md: 1.125rem;   // 18px
+$font-size-lg: 1.25rem;    // 20px
+$font-size-xl: 1.5rem;     // 24px
+$font-size-2xl: 2rem;      // 32px
+$font-size-3xl: 2.5rem;    // 40px
+$font-size-4xl: 3rem;      // 48px
+
+$font-weight-normal: 400;
+$font-weight-medium: 500;
+$font-weight-semibold: 600;
+$font-weight-bold: 700;
+$font-weight-black: 900;
+$font-weight-heavy: $font-weight-black;
+
+$line-height-tight: 1.2;
+$line-height-base: 1.6;
+$line-height-relaxed: 1.75;
+
+// --- Shadows ---
+$shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.08);
+$shadow-md: 0 4px 6px rgba(0, 0, 0, 0.06);
+$shadow-lg: 0 10px 25px rgba(0, 0, 0, 0.08);
+$shadow-hover: 0 8px 20px rgba(0, 0, 0, 0.1);
+
+// --- Container Widths ---
+$container-max-width: 1200px;
+$container-narrow: 800px;
+$text-max-width: 680px;
+
+// --- Breakpoints ---
+$bp-sm: 576px;
+$bp-md: 768px;
+$bp-lg: 992px;
+$bp-xl: 1200px;
+$breakpoint-xs: 375px;
+$breakpoint-sm: 480px;
+$breakpoint-md: $bp-md;
+$breakpoint-lg: $bp-lg;
+
+// --- Transitions ---
+$transition-fast: 150ms ease;
+$transition-base: 250ms ease;
+$transition-slow: 350ms ease;
+$transition-nav: padding-top 0.3s, padding-bottom 0.3s;
+
+// --- Button Sizes ---
+$btn-height-sm: 36px;
+$btn-height-md: 44px;
+$btn-height-lg: 52px;
+$btn-padding-x: 1.5rem;
+$btn-font-size: $font-size-sm;
+$btn-font-weight: $font-weight-bold;
+$btn-radius: $radius-md;
+$button-radius: 30px;
+
+// --- Component Sizes ---
+$section-padding-y: 90px;
+$section-padding-y-lg: 100px;
+$nav-logo-width: 240px;
+$social-button-size: 50px;
+$team-avatar-size: 225px;
+$client-logo-height: 100px;
+$z-index-whatsapp: 1030;
+$shadow-text-soft: 1px 1px 1px rgb(172, 172, 172);
+$shadow-text-strong: 2px 2px 2px rgb(70, 70, 70);
+
+// --- Bootstrap Feature Flags ---
+$spacer: 1rem;
+$border-width: 1px;
+$border-radius: $radius-md;
+$enable-rounded: true;
+$enable-shadows: true;
+$enable-gradients: false;
+
+// --- Input Heights ---
+$input-height-md: 48px;
+$input-padding-x: 1rem;
+$input-padding-y: 0.75rem;
+$input-radius: $radius-sm;
+$input-border-width: 1.5px;

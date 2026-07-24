@@ -7,10 +7,10 @@
     <div class="row d-flex justify-content-around" {% if site.data.sitetext.clients.horizontal-scrolling == "yes" %}
       id="scrolling-clients" {% endif %}>
       {% for client in site.data.sitetext.clients.list %}
-      <div class="col-md-3 col-sm-6 " style="height: 100px;">
-        <a href="{{ client.url }}" class="h-  100">
+      <div class="col-md-3 col-sm-6 client-logo">
+        <a href="{{ client.url }}" class="h-100 d-flex align-items-center justify-content-center">
           <img class="img-fluid d-block mx-auto align-self-center" src="{{ client.logo }}" alt="{{ client.title }}"
-            style="max-height: {{ site.data.sitetext.clients.max-height | default: "100px" }} ;  margin=300px ">
+            style="--client-logo-max-height: {{ site.data.sitetext.clients.max-height | default: "100px" }}">
         </a>
       </div>
       {% endfor %}

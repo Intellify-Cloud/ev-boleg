@@ -1,55 +1,203 @@
-// Styling for the footer
+// ============================================
+// Footer
+// ============================================
+
 .footer {
-  padding: 30px 0;
-  text-align: center;
-  span.copyright {
-    font-size: 90%;
-    line-height: 40px;
-    text-transform: none;
-    @include heading-font;
+  padding: $space-3xl 0 0;
+  background-color: $white;
+  border-top: 1px solid $border-color-light;
+
+  // --- Main area: brand + navigation columns ---
+  .footer-main {
+    display: grid;
+    gap: $space-2xl;
+    padding-bottom: $space-2xl;
+    border-bottom: 1px solid $border-color-light;
   }
-  ul.quicklinks {
-    font-size: 90%;
-    line-height: 40px;
-    margin-bottom: 0;
-    text-transform: none;
-    @include heading-font;
+
+  // --- Brand column ---
+  .footer-brand {
+    .footer-logo {
+      display: inline-block;
+      img {
+        max-height: 48px;
+        width: auto;
+        object-fit: contain;
+      }
+    }
+
+    .footer-description {
+      margin-top: $space-md;
+      font-size: $font-size-sm;
+      color: $text-secondary;
+      line-height: $line-height-relaxed;
+      max-width: 360px;
+    }
+
+    .footer-social {
+      margin-top: $space-lg;
+
+      ul.social-buttons {
+        margin-bottom: 0;
+
+        li a {
+          font-size: $font-size-base;
+          line-height: 44px;
+          display: block;
+          width: 44px;
+          height: 44px;
+          transition: all $transition-base;
+          color: $white;
+          border-radius: $radius-circle;
+          outline: none;
+          background-color: $primary;
+
+          &:active,
+          &:focus,
+          &:hover {
+            background-color: $primary-dark;
+            transform: translateY(-2px);
+          }
+        }
+      }
+    }
+  }
+
+  // --- Navigation columns ---
+  .footer-navigation {
+    display: grid;
+    gap: $space-xl;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    .footer-column {
+      h2.footer-column-title {
+        font-size: $font-size-sm;
+        font-weight: $font-weight-bold;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        color: $text-primary;
+        margin-bottom: $space-md;
+        padding-bottom: $space-sm;
+        border-bottom: 2px solid rgba($primary, 0.15);
+      }
+
+      ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+
+        li {
+          margin-bottom: $space-sm;
+
+          a {
+            font-size: $font-size-sm;
+            color: $text-secondary;
+            transition: color $transition-fast;
+
+            &:hover,
+            &:focus {
+              color: $primary;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // --- Bottom strip ---
+  .footer-bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: $space-sm;
+    padding: $space-lg 0 $space-xl;
+    font-size: $font-size-xs;
+    color: $text-muted;
+    text-align: center;
+
+    a {
+      color: $text-secondary;
+      transition: color $transition-fast;
+
+      &:hover,
+      &:focus {
+        color: $primary;
+      }
+    }
+
+    .footer-legal {
+      .footer-legal-sep {
+        margin: 0 $space-xs;
+      }
+    }
+
+    .footer-credits {
+      color: $text-muted;
+    }
   }
 }
 
+// --- Tablet ---
+@include media-breakpoint-up(md) {
+  .footer {
+    .footer-navigation {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .footer-bottom {
+      flex-direction: row;
+      justify-content: space-between;
+      text-align: left;
+    }
+  }
+}
+
+// --- Desktop ---
+@include media-breakpoint-up(lg) {
+  .footer {
+    .footer-main {
+      grid-template-columns: minmax(280px, 0.9fr) minmax(480px, 1.1fr);
+    }
+
+    .footer-navigation {
+      justify-self: end;
+    }
+  }
+}
+
+// --- WhatsApp floating button ---
 .whatsapp {
   position: fixed;
-  right: 8px;
+  right: 16px;
   top: 85%;
-}
-.whatsapp h5 {
-  color: rgb(255, 255, 255);
-  background: #20b20f;
-  padding: 8px;
-  border-radius: 10px;
-}
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  gap: $space-xs;
 
-ul.social-buttons {
-  margin-bottom: 0;
-  li {
-    a {
-      font-size: 20px;
-      line-height: 50px;
-      display: block;
-      width: 50px;
-      height: 50px;
-      -webkit-transition: all 0.3s;
-      -moz-transition: all 0.3s;
-      transition: all 0.3s;
-      color: white;
-      border-radius: 100%;
-      outline: none;
-      background-color: #DB5B4F;
-      &:active,
-      &:focus,
-      &:hover {
-        background-color: $primary;
-      }
+  a {
+    display: flex;
+    align-items: center;
+    gap: $space-xs;
+    background: #25D366;
+    color: $white;
+    padding: $space-sm $space-md;
+    border-radius: $radius-pill;
+    text-decoration: none;
+    font-weight: $font-weight-bold;
+    font-size: $font-size-sm;
+    box-shadow: $shadow-md;
+    transition: all $transition-base;
+
+    &:hover {
+      background: darken(#25D366, 8%);
+      box-shadow: $shadow-lg;
+      transform: translateY(-2px);
+      color: $white;
+    }
+
+    i {
+      font-size: $font-size-xl;
     }
   }
 }

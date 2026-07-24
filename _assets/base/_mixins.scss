@@ -1,13 +1,33 @@
+// ============================================
 // Font Mixins
+// ============================================
+
 @mixin serif-font {
-  font-family: 'Comfortaa', cursive;
+  font-family: $font-family-base;
 }
+
 @mixin script-font {
-  font-family: 'Comfortaa', cursive;
+  font-family: $font-family-base;
 }
+
 @mixin body-font {
-  font-family: 'Comfortaa', cursive;
+  font-family: $font-family-base;
 }
+
 @mixin heading-font {
-  font-family: 'Comfortaa', cursive;
+  font-family: $font-family-heading;
+}
+
+@mixin smooth-transition($properties: all $transition-base) {
+  -webkit-transition: $properties;
+  -moz-transition: $properties;
+  transition: $properties;
+}
+
+@mixin text-shadow($level: strong) {
+  @if $level == soft {
+    text-shadow: $shadow-text-soft;
+  } @else {
+    text-shadow: $shadow-text-strong;
+  }
 }

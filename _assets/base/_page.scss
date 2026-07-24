@@ -1,17 +1,32 @@
-// Global styling for this template
+// ============================================
+// Global Styles & Typography System
+// ============================================
+
 body {
   overflow-x: hidden;
   @include body-font;
 }
 
+// --- Typography Scale ---
+h1, h2, h3, h4, h5, h6 {
+  font-weight: $font-weight-bold;
+  line-height: $line-height-tight;
+  color: $text-primary;
+  @include heading-font;
+}
+
 p {
-  line-height: 1.75;
+  line-height: $line-height-relaxed;
+  color: $text-primary;
+  max-width: $text-max-width;
 }
 
 a {
-  color: $primary;
+  color: $text-link;
+  transition: color $transition-fast;
   &:hover {
-    color: darken($primary, 10%);
+    color: $text-link-hover;
+    text-decoration: none;
   }
 }
 
@@ -19,55 +34,79 @@ a {
   color: $primary !important;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-weight: 900;
-  @include heading-font;
-}
-
+// --- Section Defaults ---
 .page-section {
-  padding: 90px 0;
+  padding: $space-4xl 0;
+
   h2.section-heading {
-    font-size: 40px;
+    font-size: $font-size-2xl;
+    font-weight: $font-weight-bold;
     margin-top: 0;
-    margin-bottom: 15px;
+    margin-bottom: $space-sm;
+    letter-spacing: -0.02em;
   }
+
   h3.section-subheading {
-    font-size: 16px;
-    font-weight: 400;
-    font-style: italic;
-    margin-bottom: 3em;
-    text-transform: none;
+    font-size: $font-size-md;
+    font-weight: $font-weight-normal;
+    color: $text-secondary;
+    margin-bottom: $space-2xl;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
     @include serif-font;
   }
+
   h3.textblock-subheading {
-    font-size: 1.5rem;
-    font-weight: 400;
-    font-style: italic;
-    margin-bottom: 25px;
-    text-transform: none;
+    font-size: $font-size-lg;
+    font-weight: $font-weight-normal;
+    color: $text-secondary;
+    margin-bottom: $space-lg;
     @include serif-font;
   }
-
 }
-@media(min-width:768px) {
-  section {
-    padding: 100px 0;
+
+// Responsive section padding
+@include media-breakpoint-down(md) {
+  .page-section {
+    padding: $space-3xl 0;
+
+    h2.section-heading {
+      font-size: $font-size-xl;
+    }
   }
 }
 
-// Highlight color customization
-::-moz-selection {
-  background: $primary;
-  text-shadow: none;
+// --- Text Content Width (for readability) ---
+.content-narrow {
+  max-width: $container-narrow;
+  margin-left: auto;
+  margin-right: auto;
 }
 
+.page-container {
+  padding-top: 150px;
+}
+
+@media (max-width: ($bp-lg - 1px)) {
+  .page-container {
+    padding-top: 100px;
+  }
+}
+
+// --- Dividers ---
+.section-divider {
+  width: 60px;
+  height: 3px;
+  background: $primary;
+  margin: $space-md auto $space-xl;
+  border-radius: $radius-pill;
+}
+
+// --- Highlight ---
 ::selection {
   background: $primary;
+  color: $text-inverse;
   text-shadow: none;
 }
 
@@ -79,28 +118,33 @@ img::-moz-selection {
   background: transparent;
 }
 
-// ================ IFRAME
+// --- Calculator iframes ---
 .bond-calc {
   width: 100%;
   height: 1030px;
+  border-radius: $radius-lg;
 }
 
 .afford-calc {
   width: 100%;
   height: 1500px;
+  border-radius: $radius-lg;
 }
 
 .transfer-calc {
   width: 100%;
   height: 1750px;
+  border-radius: $radius-lg;
 }
 
 .deposit-calc {
   width: 100%;
   height: 1480px;
+  border-radius: $radius-lg;
 }
 
 .amortisation-calc {
   width: 100%;
   height: 1000px;
+  border-radius: $radius-lg;
 }
