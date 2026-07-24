@@ -39,18 +39,22 @@ background: grey
     <!-- Right Card: Contact Person -->
     <div class="col-md-6">
       <div class="contact-card person-card">
-        <div class="contact-card__image-container">
-          <img src="{{ site.data.sitetext.team.people[0].image }}" alt="{{ site.data.sitetext.team.people[0].name }}" class="contact-card__image">
-        </div>
         <div class="contact-card__body">
           <h3 class="contact-card__name">{{ site.data.sitetext.team.people[0].name }}</h3>
           <p class="contact-card__role">{{ site.data.sitetext.team.people[0].role }}</p>
           <div class="contact-card__links">
-            {% for network in site.data.sitetext.team.people[0].social %}
-            <a href="{{ network.url }}" class="contact-link" aria-label="{{ site.data.sitetext.team.people[0].name }} {{ network.icon | remove: 'fas fa-' | remove: 'fab fa-' }}">
-              <i class="{{ network.icon }}"></i>
+            <a href="mailto:{{ site.contactmail | default: site.email }}?subject=evo Bond Legacy Website Enquiry" class="contact-link" aria-label="Email {{ site.data.sitetext.team.people[0].name }}">
+              <i class="fas fa-envelope"></i>
+              <span>Email</span>
             </a>
-            {% endfor %}
+            <a href="tel:+{{ site.contactwhatapp }}" class="contact-link" aria-label="Call {{ site.data.sitetext.team.people[0].name }}">
+              <i class="fas fa-phone"></i>
+              <span>Call</span>
+            </a>
+            <a href="https://api.whatsapp.com/send?phone={{ site.contactwhatapp }}" class="contact-link" aria-label="WhatsApp {{ site.data.sitetext.team.people[0].name }}" target="_blank" rel="noopener">
+              <i class="fab fa-whatsapp"></i>
+              <span>WhatsApp</span>
+            </a>
           </div>
         </div>
       </div>
@@ -58,12 +62,3 @@ background: grey
 
   </div>
 </div>
-
-</div>
-
-</div>
-
-</div>
-
-</parameter>
-</write_to_file>

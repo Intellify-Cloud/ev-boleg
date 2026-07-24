@@ -1,13 +1,17 @@
 ---
 layout: page
-title: Extra Repayment Calculator
-background: white
+title: Amortisation Calculator
 ---
 
-<div>
-    <iframe class="amortisation-calc" frameborder="0"
+<div class="calculator-hero">
+  <h1 class="gradient-text">Amortisation Calculator</h1>
+  <p>See how your home loan repayment is structured over time.</p>
+</div>
+
+<div class="calculator-iframe-wrapper">
+    <iframe class="amortisation-calc calculator-frame" frameborder="0"
         src="https://www.ooba.co.za/calculators/bond-amortization-calculator?iframe=true&iftype=nobrand"
-        title="Extra Repayment Calculator"></iframe>
+        title="Amortisation Calculator"></iframe>
 </div>
 
 {% include team.html %}
