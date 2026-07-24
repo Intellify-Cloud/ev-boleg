@@ -5,8 +5,9 @@
 .btn {
   @include heading-font;
   font-weight: $btn-font-weight;
-  border-radius: $btn-radius;
-  padding: 0.625rem $btn-padding-x;
+  border-radius: $radius-pill;
+  min-height: 44px;
+  padding: 0.6875rem $btn-padding-x;
   font-size: $btn-font-size;
   line-height: $line-height-base;
   transition: all $transition-base;
@@ -14,8 +15,10 @@
   border-width: 2px;
   cursor: pointer;
 
-  &:focus, &.focus {
-    box-shadow: 0 0 0 3px rgba($primary, 0.25);
+  &:focus,
+  &.focus,
+  &:focus-visible {
+    box-shadow: $focus-ring;
   }
 
   &:active {
@@ -38,8 +41,8 @@
 
 .btn-xl {
   font-size: $font-size-base;
-  padding: 0.875rem 2.25rem;
-  border-radius: $radius-md;
+  padding: 0.95rem 2.6rem;
+  border-radius: $radius-pill;
 }
 
 // --- Primary Button ---
@@ -52,8 +55,8 @@
     background-color: $primary-dark;
     border-color: $primary-dark;
     color: $white;
-    transform: translateY(-1px);
-    box-shadow: $shadow-sm;
+    transform: translateY(-2px);
+    box-shadow: $shadow-md;
   }
 
   &:active, &:focus {

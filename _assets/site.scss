@@ -1,32 +1,44 @@
 @charset "utf-8";
+
+@import "abstracts/variables";
 @import "bootstrap/scss/functions";
-@import "base/variables.scss";
 @import "bootstrap/scss/variables";
 @import "bootstrap/scss/mixins";
 
-$header-image: "./img/evo-bond-legacy-coming-soon.jpg";
-$contact-image: "./img/contact.png";
+$header-image: "../assets/img/hero/hero-bg.jpg";
+$contact-image: "../assets/img/contact/contact-bg.png";
 
-$input-height:calc(#{$input-height-inner} + #{$input-height-border});
+$input-height: calc(#{$input-height-inner} + #{$input-height-border});
 
 @import "bootstrap/scss/bootstrap";
 @import "bootstrap";
 
-@import "base/mixins.scss";
-@import "base/page.scss";
+@import "abstracts/mixins";
+@import "abstracts/functions";
 
-@import "components/buttons.scss";
-@import "components/navbar.scss";
-@import "components/client-scroll.scss";
+@import "base/reset";
+@import "base/typography";
+@import "base/fonts";
 
-@import "layout/masthead.scss";
-@import "layout/services.scss";
-@import "layout/portfolio.scss";
-@import "layout/team.scss";
-@import "layout/contact.scss";
-@import "layout/footer.scss";
-@import "layout/clients.scss";
-@import "layout/textblock.scss";
+@import "layout/container";
+@import "layout/section";
+@import "layout/services";
+@import "layout/hero-section";
+@import "layout/portfolio";
+@import "layout/about";
+@import "layout/team";
+@import "layout/testimonials";
+@import "layout/contact";
+@import "layout/footer";
+@import "layout/clients";
+@import "layout/textblock";
+@import "layout/calculators";
+
+@import "components/button";
+@import "components/navbar";
+@import "components/card";
+@import "components/client-scroll";
+@import "components/5-easy-steps";
 
 body {
     overflow-x: hidden;

@@ -20,7 +20,7 @@ webserver_headers:
     - GET, OPTIONS, HEAD
 
 logo:
-  path: /assets/evo Bond Legacy Logo.png
+  path: /assets/img/logo/evo-bond-legacy-logo.png
 
 exclude: [node_modules,webpack-config.js,package.json,package-lock.json]
 

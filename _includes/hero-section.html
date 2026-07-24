@@ -1,0 +1,18 @@
+<!-- Hero Section -->
+<header class="hero-section">
+  <div class="container">
+    <div class="hero-section__content">
+      {%- if site.data.sitetext.header.title -%}
+      <div class="hero-section__lead">{{ site.data.sitetext.header.title | markdownify }}</div>
+      {%- endif -%}
+      {%- if site.data.sitetext.header.text -%}
+      <div class="hero-section__title text-uppercase">{{ site.data.sitetext.header.text | markdownify }}</div>
+      {%- endif -%}
+      {%- if site.data.sitetext.header.subtitle -%}
+      <p class="hero-section__subtitle">{{ site.data.sitetext.header.subtitle }}</p>
+      {%- endif -%}
+      <a class="btn btn-primary btn-xl text-uppercase hero-section__action js-scroll-trigger" href="{{ "/contact" | relative_url }}">Talk To Us</a>
+    </div>
+  </div>
+</header>
+<!-- End Hero Section -->

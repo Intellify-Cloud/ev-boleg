@@ -1,15 +1,15 @@
 <!-- Clients -->
-<section class="bg-light py-5" id="{{ site.data.sitetext.clients.section | default: "clients" }}">
+<section class="bg-light section" id="{{ site.data.sitetext.clients.section | default: "clients" }}">
   <div class="col-lg-12 text-center">
-    <h2 class="section-heading text-uppercase">{{ site.data.sitetext.clients.title }}</h2>
+    <h2 class="section__heading text-uppercase">{{ site.data.sitetext.clients.title }}</h2>
   </div>
   <div class="container">
-    <div class="row d-flex justify-content-around" {% if site.data.sitetext.clients.horizontal-scrolling == "yes" %}
+    <div class="row clients__row d-flex justify-content-around" {% if site.data.sitetext.clients.horizontal-scrolling == "yes" %}
       id="scrolling-clients" {% endif %}>
       {% for client in site.data.sitetext.clients.list %}
-      <div class="col-md-3 col-sm-6 client-logo">
+      <div class="col-md-3 col-sm-6 clients__logo">
         <a href="{{ client.url }}" class="h-100 d-flex align-items-center justify-content-center">
-          <img class="img-fluid d-block mx-auto align-self-center" src="{{ client.logo }}" alt="{{ client.title }}"
+          <img class="img-fluid d-block mx-auto align-self-center clients__image" src="{{ client.logo }}" alt="{{ client.title }}"
             style="--client-logo-max-height: {{ site.data.sitetext.clients.max-height | default: "100px" }}">
         </a>
       </div>

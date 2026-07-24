@@ -1,0 +1,39 @@
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg fixed-top site-navbar" id="mainNav" aria-label="Primary navigation">
+  <div class="container site-navbar__container">
+    <a class="navbar-brand site-navbar__brand js-scroll-trigger" href="{% if page.layout == 'home' %}#page-top{% else %}{{ site.baseurl }}/#{% endif %}">
+      {%- if site.logo -%}
+      <img src="{{ site.logo.path | relative_url }}" alt="{{ site.company | default: site.title }}">
+      {%- else -%}
+      {{ site.title }}
+      {%- endif -%}
+    </a>
+
+    <button class="navbar-toggler site-navbar__toggle" type="button" data-toggle="collapse"
+      data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+      aria-label="Toggle navigation">
+      <span>Menu</span>
+    </button>
+
+    <div class="collapse navbar-collapse site-navbar__collapse" id="navbarResponsive">
+      <ul class="navbar-nav text-uppercase ml-auto site-navbar__nav">
+        {%- for link in site.data.navigation.nav -%}
+        <li class="nav-item site-navbar__item">
+          {%- if link.url -%}
+          {%- if link.url == "/contact" -%}
+          <a class="nav-link site-navbar__link site-navbar__link--button js-scroll-trigger" href="{{ link.url | relative_url }}">{{ link.title }}</a>
+          {%- else -%}
+          <a class="nav-link site-navbar__link js-scroll-trigger" href="{{ link.url }}">{{ link.title }}</a>
+          {%- endif -%}
+          {%- elsif link.section -%}
+          <a class="nav-link site-navbar__link js-scroll-trigger" href="{% if page.layout == 'home' %}#{{ link.section }}{% else %}{{ site.baseurl }}/#{{ link.section }}{% endif %}">{{ link.title }}</a>
+          {%- else -%}
+          <a class="nav-link site-navbar__link js-scroll-trigger" href="#">{{ link.title }}</a>
+          {%- endif -%}
+        </li>
+        {%- endfor -%}
+      </ul>
+    </div>
+  </div>
+</nav>
+<!-- End Navbar -->

@@ -1,0 +1,53 @@
+.service-card {
+  border: 1px solid $border-color-light;
+  border-radius: $radius-lg;
+  transition: all $transition-base;
+  background: $white;
+  box-shadow: none;
+  min-height: 280px;
+
+  &:hover {
+    border-color: rgba($primary, 0.2);
+    box-shadow: $shadow-md;
+    transform: translateY(-2px);
+  }
+
+  &__body {
+    padding: $space-2xl $space-lg;
+  }
+
+  &__title {
+    font-size: $font-size-md;
+    margin-bottom: $space-md;
+  }
+
+  &__description {
+    font-size: $font-size-sm;
+    line-height: $line-height-relaxed;
+  }
+
+  &__action {
+    border: none;
+    background: none;
+    padding: 0 $space-lg $space-lg;
+
+    .button {
+      width: 100%;
+    }
+  }
+}
+
+.card-deck {
+  &.services,
+  &.calculators,
+  &.articles {
+    @include media-breakpoint-down(md) {
+      display: flex;
+      flex-direction: column;
+
+      .service-card {
+        margin-bottom: $space-lg;
+      }
+    }
+  }
+}

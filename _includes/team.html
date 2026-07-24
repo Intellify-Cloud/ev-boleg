@@ -1,40 +1,66 @@
 <!-- Team -->
-<section class="page-section" id="{{ site.data.sitetext.team.section | default: "team" }}">
+<section class="team-section section" id="{{ site.data.sitetext.team.section | default: "team" }}">
 <div class="container">
-  <div class="row">
-	<div class="col-lg-12 text-center">
-	  <h2 class="section-heading text-uppercase">{{ site.data.sitetext.team.title }}</h2>
-	  
-	  
-	 <!-- <h3 class="textblock-subheading text-muted"><a class="badge badge-pill g" href="tel:{{ site.data.sitetext.team.contact | default: "" }}">Call: {{ site.data.sitetext.team.contact | default: "" }}</a></h3> -->
-	
-	</div>
+  <div class="team-section__header">
+    <h2 class="section__heading text-uppercase">{{ site.data.sitetext.team.title }}</h2>
   </div>
-  <div class="row">
-  {% for person in site.data.sitetext.team.people %}
-	<div class="col-lg-4">
-	  <div class="team-member">
-		<img class="mx-auto rounded-circle" src="{{ person.image }}" alt="{{ person.name }}">
-		<h4>{{ person.name }}</h4>
-		<p class="text-muted">{{ person.role }}</p>
-		<ul class="list-inline social-buttons">
-		{% for network in person.social %}
-		  <li class="list-inline-item">
-			<a href="{{ network.url }}" aria-label="{{ person.name }} contact link">
-			  <i class="{{ network.icon }}" aria-hidden="true"></i>
-			</a>
-		  </li>
-		{% endfor %}
-		</ul>
-	  </div>
-	</div>
-  {% endfor %}
+
+  {% assign person = site.data.sitetext.team.people | first %}
+  <div class="team-section__grid">
+    <article class="team-feature-card team-feature-card--hours">
+      <div class="team-feature-card__media team-feature-card__media--tint" aria-hidden="true">
+        <i class="fas fa-clock"></i>
+      </div>
+      <div class="team-feature-card__body">
+        <p class="team-feature-card__eyebrow">Office Hours</p>
+        <dl class="team-hours">
+          <div>
+            <dt>Monday to Friday</dt>
+            <dd>8:00 AM - 5:00 PM</dd>
+          </div>
+          <div>
+            <dt>Saturday</dt>
+            <dd>9:00 AM - 1:00 PM</dd>
+          </div>
+          <div>
+            <dt>Sunday &amp; public holidays</dt>
+            <dd>Closed</dd>
+          </div>
+        </dl>
+      </div>
+    </article>
+
+    <article class="team-feature-card team-feature-card--person">
+      <div class="team-feature-card__media">
+        <img src="{{ person.image | relative_url }}" alt="{{ person.name }}">
+      </div>
+      <div class="team-feature-card__body">
+        <p class="team-feature-card__eyebrow">Direct Contact</p>
+        <h3 class="team-feature-card__title">{{ person.name }}</h3>
+        <p class="team-feature-card__role">{{ person.role }}</p>
+        <div class="team-feature-card__actions" aria-label="{{ person.name }} direct contact links">
+        {% for network in person.social %}
+          <a href="{{ network.url }}" class="team-contact-link">
+            <i class="{{ network.icon }}" aria-hidden="true"></i>
+            {% if network.icon contains "phone" %}
+              <span>Call Thea</span>
+            {% elsif network.icon contains "envelope" %}
+              <span>Email Thea</span>
+            {% else %}
+              <span>Contact Thea</span>
+            {% endif %}
+          </a>
+        {% endfor %}
+        </div>
+      </div>
+    </article>
   </div>
-  <div class="row">
-	<div class="col-lg-8 mx-auto text-center">
-	  <div class="large text-muted">{{ site.data.sitetext.team.subtext | markdownify }}</div>
-	</div>
+
+  {% if site.data.sitetext.team.subtext %}
+  <div class="team-section__subtext">
+    <div class="large text-muted">{{ site.data.sitetext.team.subtext | markdownify }}</div>
   </div>
-</div>
+  {% endif %}
+    </div>
 </section>
 <!-- End Team -->

@@ -1,0 +1,78 @@
+// ============================================
+// Base: Reset, Typography & Focus System
+// ============================================
+
+body {
+  overflow-x: hidden;
+  @include body-font;
+  color: $text-primary;
+  background: $white;
+  text-rendering: optimizeLegibility;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: $font-weight-bold;
+  line-height: $line-height-tight;
+  color: $text-primary;
+  @include heading-font;
+}
+
+p {
+  line-height: $line-height-relaxed;
+  color: $text-primary;
+  max-width: $measure-readable;
+}
+
+a {
+  color: $text-link;
+  transition: color $transition-fast;
+
+  &:hover {
+    color: $text-link-hover;
+    text-decoration: none;
+  }
+
+  &:focus-visible {
+    border-radius: $radius-sm;
+    outline: 0;
+    box-shadow: $focus-ring;
+  }
+}
+
+.u-color-primary {
+  color: $primary !important;
+}
+
+:focus-visible {
+  outline: 0;
+  box-shadow: $focus-ring;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+::selection {
+  background: $primary;
+  color: $text-inverse;
+  text-shadow: none;
+}
+
+img::selection {
+  background: transparent;
+}
+
+img::-moz-selection {
+  background: transparent;
+}
+
+img {
+  filter: brightness(0.9);
+}

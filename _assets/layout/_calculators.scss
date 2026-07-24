@@ -1,0 +1,127 @@
+.page-section {
+  padding: $space-section-sm 0;
+
+  h2.section-heading {
+    margin-top: 0;
+    margin-bottom: $space-md;
+    font-size: $font-size-section;
+    font-weight: $font-weight-bold;
+    letter-spacing: 0;
+  }
+
+  h3.section-subheading {
+    max-width: $measure-readable;
+    margin-right: auto;
+    margin-bottom: $space-2xl;
+    margin-left: auto;
+    color: darken($text-secondary, 20%) !important;
+    font-size: $font-size-base;
+    font-weight: $font-weight-normal;
+    font-style: italic;
+    line-height: $line-height-relaxed;
+    text-transform: none;
+  }
+}
+
+#calculators,
+#more-calculators {
+  background-color: $bg-light;
+
+  .card-deck.calculators {
+    gap: $space-lg;
+  }
+
+  .card {
+    overflow: hidden;
+    border: 0;
+    border-radius: $radius-lg;
+    background: $white;
+    box-shadow: $shadow-sm;
+    transition:
+      border-color $transition-base,
+      box-shadow $transition-base;
+  }
+
+  .card:hover {
+    box-shadow: $shadow-md;
+  }
+
+  .card-body {
+    padding: $space-2xl $space-lg;
+  }
+
+  .fa-stack {
+    margin-bottom: $space-md;
+    font-size: 3rem;
+  }
+
+  .service-heading {
+    margin: $space-md 0 $space-sm;
+    color: $text-primary;
+    font-size: $font-size-md;
+    font-weight: $font-weight-bold;
+    line-height: $line-height-tight;
+    text-transform: none;
+
+    p {
+      margin-bottom: 0;
+    }
+  }
+
+  .text-muted {
+    color: $text-secondary !important;
+    font-size: $font-size-sm;
+    line-height: $line-height-relaxed;
+
+    p {
+      margin-bottom: 0;
+    }
+  }
+
+  .card-footer {
+    padding: 0 $space-lg $space-lg;
+    border: 0;
+    background: none;
+  }
+
+  .btn {
+    border-radius: $button-radius;
+  }
+}
+
+.calculator-frame {
+  width: 100%;
+  border-radius: $radius-lg;
+}
+
+.bond-calc { height: 1030px; }
+.afford-calc { height: 1500px; }
+.transfer-calc { height: 1750px; }
+.deposit-calc { height: 1480px; }
+.amortisation-calc { height: 1000px; }
+
+@include media-breakpoint-up(md) {
+  .page-section {
+    padding: $space-section-md 0;
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  .page-section {
+    padding: $space-section-lg 0;
+  }
+}
+
+@include media-breakpoint-down(md) {
+  #calculators,
+  #more-calculators {
+    .card-deck.calculators {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .card {
+      margin-bottom: $space-lg;
+    }
+  }
+}

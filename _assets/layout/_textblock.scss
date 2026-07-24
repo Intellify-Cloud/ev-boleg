@@ -1,25 +1,23 @@
 // ============================================
-// Text Block Section (Why Us)
+// Textblock Section
 // ============================================
 
-.textblock-heading {
-  margin: $space-lg 0;
-  text-transform: none;
-  color: $primary;
-  font-size: $font-size-lg;
-  font-weight: $font-weight-bold;
-}
-
-.textblock-image {
-  min-width: 50px;
-
-  i {
+.textblock {
+  &__title {
+    margin: 5px 0;
+    text-transform: none;
     color: $primary;
   }
-}
 
-.textblock-title {
-  line-height: 1.6;
-  font-size: $font-size-base;
-  color: $text-primary;
+  &__icon {
+    min-width: 50px;
+
+    i {
+      display: none;
+    }
+  }
+
+  &__item {
+    line-height: 2em;
+  }
 }

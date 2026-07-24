@@ -1,5 +1,4 @@
-// ============================================
-// Design Tokens
+// ============================================// Design Tokens
 // ============================================
 
 // --- Brand Colors ---
@@ -39,8 +38,8 @@ $text-link: $primary;
 $text-link-hover: $primary-dark;
 
 // --- Border Colors ---
-$border-color: $gray-300;
-$border-color-light: $gray-200;
+$border-color: $gray-400;
+$border-color-light: $gray-300;
 $border-color-focus: $primary;
 
 // --- Border Radius ---
@@ -52,6 +51,7 @@ $radius-pill: 50px;
 $radius-circle: 50%;
 
 // --- Spacing Scale ---
+$ratio-golden: 1.618;
 $space-xs: 0.25rem;   // 4px
 $space-sm: 0.5rem;    // 8px
 $space-md: 1rem;      // 16px
@@ -60,6 +60,9 @@ $space-xl: 2rem;      // 32px
 $space-2xl: 3rem;     // 48px
 $space-3xl: 4rem;     // 64px
 $space-4xl: 6rem;     // 96px
+$space-section-sm: 3.75rem;
+$space-section-md: 6.0625rem;
+$space-section-lg: 9.8125rem;
 
 // --- Typography ---
 $font-family-base: 'Comfortaa', cursive;
@@ -68,13 +71,16 @@ $font-family-brand: $font-family-base;
 
 $font-size-xs: 0.75rem;    // 12px
 $font-size-sm: 0.875rem;   // 14px
-$font-size-base: 1rem;     // 16px
+$font-size-base: 1.125rem;     // 18px
 $font-size-md: 1.125rem;   // 18px
 $font-size-lg: 1.25rem;    // 20px
 $font-size-xl: 1.5rem;     // 24px
 $font-size-2xl: 2rem;      // 32px
 $font-size-3xl: 2.5rem;    // 40px
 $font-size-4xl: 3rem;      // 48px
+$font-size-display-sm: clamp(2.25rem, 11vw, 3.5rem);
+$font-size-display-md: clamp(3.5rem, 7vw, 5.75rem);
+$font-size-section: clamp(2rem, 4vw, 3.25rem);
 
 $font-weight-normal: 400;
 $font-weight-medium: 500;
@@ -86,17 +92,26 @@ $font-weight-heavy: $font-weight-black;
 $line-height-tight: 1.2;
 $line-height-base: 1.6;
 $line-height-relaxed: 1.75;
+$line-height-display: 1.06;
 
 // --- Shadows ---
 $shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.08);
 $shadow-md: 0 4px 6px rgba(0, 0, 0, 0.06);
 $shadow-lg: 0 10px 25px rgba(0, 0, 0, 0.08);
 $shadow-hover: 0 8px 20px rgba(0, 0, 0, 0.1);
+$shadow-soft: 0 18px 50px rgba(0, 0, 0, 0.08);
 
 // --- Container Widths ---
 $container-max-width: 1200px;
 $container-narrow: 800px;
 $text-max-width: 680px;
+$measure-readable: 62ch;
+
+// --- Surfaces ---
+$surface-subtle: #f5fbfc;
+$surface-card: rgba($white, 0.94);
+$surface-tint: linear-gradient(135deg, rgba($primary, 0.09), rgba($white, 0.96));
+$focus-ring: 0 0 0 3px rgba($primary, 0.32);
 
 // --- Breakpoints ---
 $bp-sm: 576px;

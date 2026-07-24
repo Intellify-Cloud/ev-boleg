@@ -1,0 +1,15 @@
+.content-narrow {
+  max-width: $container-narrow;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.page-container {
+  padding-top: 150px;
+}
+
+@media (max-width: ($bp-lg - 1px)) {
+  .page-container {
+    padding-top: 100px;
+  }
+}

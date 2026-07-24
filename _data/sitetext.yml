@@ -1,6 +1,7 @@
-ges are also inheader:
-    title: 
-    text: Need a Home Loan?
+header:
+    title: "Bond origination made clearer"
+    text: "Need a Home Loan?"
+    subtitle: "Compare bank quotes, understand what you can afford, and move through your application with calm expert guidance."
 
 services:
     title: "Services We Offer"
@@ -76,7 +77,7 @@ more-calculators:
 
 textblock:
     title: "Why evo Bond Legacy"
-    text: "Home loans ....getting your bond approved."
+    text: "A simpler path from application to approval."
     footer: "Our services is completely FREE, with no obligation."
     section: textblock
     list:
@@ -145,9 +146,9 @@ team:
     people:
       - name: "Thea Sauer"
         role: "Branch Manager"
-        image: assets/img/team/Thea Sauer evo Bond Legacy.jpg
+        image: assets/img/team/thea-sauer.jpg
         social:
-          - url: tel:072 729 2066
+          - url: tel:+27727292066
             icon: fas fa-phone
           - url: mailto:thea@bondlegacy.co.za?subject=evo Bond Legacy Website Enquiry
             icon: fas fa-envelope
@@ -168,7 +169,7 @@ testimonials:
         testimony: "Baie dankie vir al jou hulp en bystand."
       
       - name: "Marco M."
-        testimony: "Thanks again for your service Thea. I’ll sure  will use you, in the future again."
+        testimony: "Thanks again for your service Thea. I'll sure will use you, in the future again."
         
       - name: "Nthabiseng"
         testimony: "Thank you so much for the good news! I am so excited."
@@ -188,9 +189,9 @@ testimonials:
 
 contact:
     title: "Contact Us"
-    text: ""
-    section: team
-    
+    text: "We're here to help with your home loan journey."
+    section: contact
+
 footer:
     description: "We help you get the best home loan deal by sourcing competitive quotes from all major South African banks."
     social_label: "Follow us"
@@ -227,15 +228,15 @@ footer:
         links:
           - text: "072 729 2066"
             url: "tel:+27727292066"
-            external: true
           - text: "thea@bondlegacy.co.za"
             url: "mailto:thea@bondlegacy.co.za"
-            external: true
           - text: "Contact Us"
             url: "/contact"
     credits:
       - text: "Powered by evo Home Loans"
         url: "https://evohomeloans.co.za/bond-originators/pretoria/"
+      - text: "Website by Intellify"
+        url: "https://intellify.co.za"
 
 
 # {{ site.data.sitetext.ex.ex | markdownify | default: example }}

@@ -1,18 +1,17 @@
 <!-- About -->
 
-  <section class="bg-light page-section" id="{{ site.data.sitetext.about.section | default: "about" }}">
+<section class="bg-light section about-section" id="{{ site.data.sitetext.about.section | default: "about" }}">
     <div class="container">
-      <div class="row">
-        <div class="col-lg-12 text-center">
-          <h2 class="section-heading text-uppercase">{{ site.data.sitetext.about.title | default: "About Us" }}</h2>
-          <!-- <h3 class="section-subheading text-muted">{{ site.data.sitetext.about.text | default: "" }}</h3> -->
+      <div class="row about-section__title-row">
+        <div class="col-12 text-center">
+          <h2 class="section__heading text-uppercase about-section__title">{{ site.data.sitetext.about.title | default: "About Us" }}</h2>
         </div>
       </div>
-	  <div class="row">
-		<div class="col-lg-9 mx-auto text-center">
-		  <div class="large text-muted">{{ site.data.sitetext.about.text2 | markdownify }}</div>
-		</div>
-	  </div>
+      <div class="row about-section__copy-row">
+        <div class="col-lg-9 mx-auto text-center">
+          <div class="large text-muted about-section__copy">{{ site.data.sitetext.about.text2 | markdownify }}</div>
+        </div>
+      </div>
     </div>
   </section>
   

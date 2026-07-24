@@ -1,58 +1,110 @@
-// ============================================
-// Testimonials Section
-// ============================================
+.testimonials-section {
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 18% 20%, rgba($primary, 0.20), rgba($primary, 0) 34%),
+    radial-gradient(circle at 82% 14%, rgba($primary-light, 0.18), rgba($primary-light, 0) 30%),
+    linear-gradient(135deg, rgba(17, 35, 40, 0.16), rgba(5, 24, 29, 0.08)),
+    linear-gradient(135deg, rgba($surface-subtle, 0.90), rgba($white, 0.78));
 
-#testimonials {
-  .team-member {
-    margin-bottom: $space-2xl;
-    text-align: center;
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+      linear-gradient(120deg, rgba($white, 0.32), rgba($white, 0) 34%),
+      linear-gradient(180deg, rgba($white, 0), rgba(5, 24, 29, 0.08));
+    pointer-events: none;
+  }
 
-    h4, h5 {
-      margin-top: $space-md;
-      margin-bottom: $space-xs;
-      text-transform: none;
-    }
+  .container {
+    position: relative;
+    z-index: 1;
+  }
 
-    h5 {
-      color: $primary;
-      font-weight: $font-weight-bold;
-      font-size: $font-size-md;
-    }
+  &__grid {
+    row-gap: $space-lg;
+  }
 
-    p {
-      margin-top: 0;
-      font-size: $font-size-sm;
-      line-height: $line-height-relaxed;
-      color: $text-secondary;
-      max-width: 100%;
-    }
-
-    .text-muted.font-italic {
-      font-size: $font-size-base;
-      color: $text-primary !important;
-      background: $bg-primary-light;
-      padding: $space-lg;
-      border-radius: $radius-lg;
-      position: relative;
-      margin-bottom: $space-lg;
-
-      &::after {
-        content: '';
-        position: absolute;
-        bottom: -8px;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 0;
-        height: 0;
-        border-left: 10px solid transparent;
-        border-right: 10px solid transparent;
-        border-top: 10px solid $bg-primary-light;
-      }
-    }
+  &__item {
+    display: flex;
   }
 }
 
-.highlight {
-  background-color: #fff2ac;
-  background-image: linear-gradient(to right, #ffe359 0%, #fff2ac 100%);
+.testimonial-card {
+  position: relative;
+  display: flex;
+  height: 100%;
+  max-width: none;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-bottom: 0;
+  padding: $space-xl;
+  overflow: hidden;
+  border: 1px solid rgba($white, 0.74);
+  text-align: left;
+  background:
+    linear-gradient(145deg, rgba($white, 0.86), rgba($white, 0.54)),
+    rgba($white, 0.42);
+  border-radius: $radius-lg;
+  box-shadow:
+    0 18px 50px rgba($black, 0.10),
+    0 2px 8px rgba($black, 0.06),
+    inset 0 1px 0 rgba($white, 0.86);
+  backdrop-filter: blur(18px) saturate(1.24);
+  -webkit-backdrop-filter: blur(18px) saturate(1.24);
+  transition:
+    transform $transition-base,
+    box-shadow $transition-base,
+    border-color $transition-base;
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 1px;
+    border-radius: calc(#{$radius-lg} - 1px);
+    background:
+      radial-gradient(circle at 16% 10%, rgba($white, 0.70), rgba($white, 0) 34%),
+      linear-gradient(135deg, rgba($primary, 0.08), rgba($white, 0.08) 44%);
+    pointer-events: none;
+  }
+
+  &:hover {
+    border-color: rgba($white, 0.92);
+    box-shadow:
+      0 24px 64px rgba($black, 0.14),
+      0 8px 18px rgba($primary, 0.10),
+      inset 0 1px 0 rgba($white, 0.82);
+    transform: translateY(-3px);
+  }
+
+  > * {
+    position: relative;
+    z-index: 1;
+  }
+
+  &__text {
+    position: relative;
+    margin: 0 0 $space-lg;
+    color: rgba($text-primary, 0.88) !important;
+    font-size: $font-size-base;
+    font-style: normal !important;
+    line-height: $line-height-relaxed;
+
+    &::before {
+      content: '"';
+      display: block;
+      color: rgba($primary, 0.46);
+      font-size: 3rem;
+      font-weight: $font-weight-black;
+      line-height: 0.8;
+      text-shadow: 0 10px 24px rgba($primary, 0.14);
+    }
+  }
+
+  &__author {
+    color: $primary-dark;
+    font-size: $font-size-sm;
+    font-weight: $font-weight-bold;
+  }
 }

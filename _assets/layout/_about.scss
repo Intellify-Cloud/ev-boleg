@@ -1,0 +1,29 @@
+.about-section {
+  .container {
+    max-width: 800px;
+  }
+
+  &__title-row {
+    justify-content: center;
+  }
+
+  &__title {
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+  }
+
+  &__copy-row {
+    justify-content: center;
+  }
+
+  &__copy {
+    text-align: center;
+
+    p {
+      margin-right: auto;
+      margin-left: auto;
+      text-align: center;
+    }
+  }
+}

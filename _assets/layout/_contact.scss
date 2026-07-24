@@ -2,98 +2,205 @@
 // Contact Section
 // ============================================
 
-section#contact {
+.contact-us {
+  .contact-card {
+    background: $white;
+    border-radius: $radius-lg;
+    box-shadow: $shadow-md;
+    overflow: hidden;
+    height: 100%;
+    transition: all $transition-base;
+
+    &:hover {
+      box-shadow: $shadow-lg;
+      transform: translateY(-4px);
+    }
+
+    &__header {
+      background: linear-gradient(135deg, rgba($primary, 0.15), rgba($primary, 0.05));
+      padding: $space-xl $space-lg;
+      text-align: center;
+      border-bottom: 2px solid rgba($primary, 0.2);
+    }
+
+    &__icon {
+      font-size: 3rem;
+      color: $primary;
+      margin-bottom: $space-md;
+      display: block;
+    }
+
+    &__title {
+      font-size: $font-size-xl;
+      font-weight: $font-weight-bold;
+      color: $text-primary;
+      margin: 0;
+    }
+
+    &__body {
+      padding: $space-xl $space-lg;
+    }
+
+    &__image-container {
+      width: 100%;
+      height: 200px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    &__image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+      filter: brightness(0.9);
+    }
+
+    &__name {
+      font-size: $font-size-xl;
+      font-weight: $font-weight-bold;
+      color: $text-primary;
+      margin-bottom: $space-sm;
+      text-align: center;
+    }
+
+    &__role {
+      font-size: $font-size-md;
+      color: $text-secondary;
+      text-align: center;
+      margin-bottom: $space-lg;
+    }
+
+    &__links {
+      display: flex;
+      justify-content: center;
+      gap: $space-md;
+    }
+  }
+
+  .office-hours-card {
+    .contact-card__body {
+      padding: $space-2xl $space-lg;
+    }
+
+    .hours-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: $space-md 0;
+      border-bottom: 1px solid $border-color-light;
+
+      &:last-child {
+        border-bottom: none;
+      }
+
+      &.closed {
+        .hours-time {
+          color: $brand-red;
+          font-weight: $font-weight-bold;
+        }
+      }
+    }
+
+    .hours-day {
+      font-size: $font-size-base;
+      color: $text-primary;
+      font-weight: $font-weight-medium;
+    }
+
+    .hours-time {
+      font-size: $font-size-base;
+      color: $text-secondary;
+      font-weight: $font-weight-semibold;
+    }
+  }
+
+  .person-card {
+    .contact-link {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: $social-button-size;
+      height: $social-button-size;
+      border-radius: $radius-circle;
+      background: $bg-primary-light;
+      color: $primary;
+      font-size: $font-size-lg;
+      transition: all $transition-base;
+      text-decoration: none;
+
+      &:hover {
+        background: $primary;
+        color: $white;
+        transform: translateY(-2px);
+      }
+
+      i {
+        margin: 0;
+      }
+    }
+  }
+}
+
+#contact {
+  > .container {
+    max-width: 800px;
+  }
+}
+
+.contact {
   background-color: $gray-900;
   background-image: url("#{$contact-image}");
   background-repeat: no-repeat;
   background-position: center;
-  background-size: cover;
-  position: relative;
 
-  // Dark overlay for readability
-  &::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.7);
-  }
-
-  .container {
-    position: relative;
-    z-index: 1;
-  }
-
-  .section-heading {
+  &__heading {
     color: $white;
   }
 
-  .section-subheading {
-    color: rgba(255, 255, 255, 0.7) !important;
-  }
-
-  .form-group {
-    margin-bottom: $space-md;
+  &__group {
+    margin-bottom: 25px;
 
     input,
     textarea {
-      padding: $input-padding-y $input-padding-x;
-      border-radius: $input-radius;
-      border: $input-border-width solid $border-color;
-      font-family: $font-family-base;
-      font-size: $font-size-base;
-      transition: all $transition-fast;
-
-      &:focus {
-        border-color: $primary;
-        box-shadow: 0 0 0 3px rgba($primary, 0.2);
-      }
+      padding: 20px;
     }
 
     input.form-control {
-      height: $input-height-md;
+      height: auto;
     }
 
     textarea.form-control {
-      height: 200px;
-      resize: vertical;
+      height: 248px;
     }
   }
 
   .form-control:focus {
     border-color: $primary;
-    box-shadow: 0 0 0 3px rgba($primary, 0.2);
+    box-shadow: none;
   }
 
-  // Floating label style placeholders (not ideal, but preserving existing form structure)
   ::-webkit-input-placeholder {
-    font-weight: $font-weight-normal;
-    color: $text-muted;
-    font-family: $font-family-base;
-    font-size: $font-size-sm;
+    font-weight: 700;
+    color: $gray-400;
+    @include heading-font;
   }
-  :-moz-placeholder {
-    font-weight: $font-weight-normal;
-    color: $text-muted;
-    font-family: $font-family-base;
-    font-size: $font-size-sm;
-  }
-  ::-moz-placeholder {
-    font-weight: $font-weight-normal;
-    color: $text-muted;
-    font-family: $font-family-base;
-    font-size: $font-size-sm;
-  }
-  :-ms-input-placeholder {
-    font-weight: $font-weight-normal;
-    color: $text-muted;
-    font-family: $font-family-base;
-    font-size: $font-size-sm;
-  }
-}
 
-.contact-us p {
-  margin-bottom: $space-xs;
+  :-moz-placeholder {
+    font-weight: 700;
+    color: $gray-400;
+    @include heading-font;
+  }
+
+  ::-moz-placeholder {
+    font-weight: 700;
+    color: $gray-400;
+    @include heading-font;
+  }
+
+  :-ms-input-placeholder {
+    font-weight: 700;
+    color: $gray-400;
+    @include heading-font;
+  }
 }

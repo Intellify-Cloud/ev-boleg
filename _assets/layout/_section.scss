@@ -1,0 +1,42 @@
+.section {
+  padding: $space-section-sm 0;
+
+  &__heading {
+    font-size: $font-size-section;
+    font-weight: $font-weight-bold;
+    margin-top: 0;
+    margin-bottom: $space-md;
+    letter-spacing: 0;
+  }
+
+  &__subheading {
+    font-size: 1.25rem;
+    font-weight: $font-weight-normal;
+    color: darken($text-secondary, 20%) !important;
+    line-height: $line-height-relaxed;
+    margin-bottom: $space-2xl;
+    max-width: $measure-readable;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@include media-breakpoint-up(md) {
+  .section {
+    padding: $space-section-md 0;
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  .section {
+    padding: $space-section-lg 0;
+  }
+}
+
+.section-divider {
+  width: 4rem;
+  height: 3px;
+  background: $primary;
+  margin: $space-md auto $space-xl;
+  border-radius: $radius-pill;
+}
